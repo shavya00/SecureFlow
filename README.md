@@ -1,4 +1,4 @@
-# SENTINEL — Distributed Banking Transaction & Fraud Detection Engine
+# SecureFlow — Distributed Banking Transaction & Fraud Detection Platform
 
 > **Intelligent Banking. Secure Transactions. Real-Time Fraud Intelligence.**
 
