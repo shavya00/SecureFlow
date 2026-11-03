@@ -6,6 +6,13 @@ SENTINEL is an enterprise-grade fintech banking transaction processing and real-
 
 ---
 
+### 📄 Academic Case Study Dossier
+- **Live Website**: [https://25bai10048-shavya.vercel.app/](https://25bai10048-shavya.vercel.app/)
+- **Case Study Document (WPS Docs)**: [Huffman Coding Case Study](https://ap.wps.com/cms/docs/d/cbCaehdc77wBATjy?platform=pc&refer=whatsapp) (`Huffman_Coding_Case_Study.docx`)
+- **Focus**: Optimal prefix-free variable-length encoding, greedy min-heap tree construction, entropy compression bounds, and financial telemetry optimization.
+
+---
+
 ## 1. System Architecture
 
 ```mermaid

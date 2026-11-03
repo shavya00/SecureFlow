@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { ShieldAlert, Landmark, UserCheck, Shield, RefreshCw, LogOut, Radio } from 'lucide-react';
+import { ShieldAlert, Landmark, UserCheck, Shield, RefreshCw, LogOut, Radio, FileText, ExternalLink } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const { user, role, activePortal, setActivePortal, quickSwitch, logout, isLoading } = useAuth();
@@ -61,6 +61,18 @@ export const Navbar: React.FC = () => {
               <Shield className="w-3.5 h-3.5" />
               <span>Fraud Intelligence</span>
             </button>
+
+            <a
+              href="https://ap.wps.com/cms/docs/d/cbCaehdc77wBATjy?platform=pc&refer=whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-amber-300 hover:text-amber-200 hover:bg-amber-500/10 transition-all border border-amber-500/20"
+              title="Open Huffman Coding Case Study in WPS Docs"
+            >
+              <FileText className="w-3.5 h-3.5 text-amber-400" />
+              <span>Case Study</span>
+              <ExternalLink className="w-3 h-3 text-amber-400/80" />
+            </a>
           </div>
 
           {/* Demo Persona Switcher & Telemetry */}

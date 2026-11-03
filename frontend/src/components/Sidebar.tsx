@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import {
   LayoutDashboard, ArrowLeftRight, ShieldAlert, Landmark, BarChart3,
-  FileText, Settings, Shield, ShieldCheck, LogOut, ChevronDown, ChevronUp, Radio
+  FileText, Settings, Shield, ShieldCheck, LogOut, ChevronDown, ChevronUp, Radio,
+  BookOpen, ExternalLink
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -21,6 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
     { id: 'accounts', label: 'Accounts', icon: Landmark },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
     { id: 'audit-logs', label: 'Audit Logs', icon: FileText },
+    { id: 'case-study', label: 'Case Study', icon: BookOpen },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
@@ -61,6 +63,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
             );
           })}
         </nav>
+
+        {/* Case Study Fast Link */}
+        <div className="px-3 pt-1">
+          <a
+            href="https://ap.wps.com/cms/docs/d/cbCaehdc77wBATjy?platform=pc&refer=whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-[11px] font-mono font-medium bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/25 transition-all group shadow-sm"
+          >
+            <div className="flex items-center space-x-2">
+              <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+              <span>Case Study Doc</span>
+            </div>
+            <ExternalLink className="w-3 h-3 text-amber-400/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
       </div>
 
       {/* Bottom Status Card & User Profile */}

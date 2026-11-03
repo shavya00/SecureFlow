@@ -14,6 +14,7 @@ import { LiveTransactionMonitoring } from './components/FraudDashboard/LiveTrans
 import { FraudRulesAdmin } from './components/FraudDashboard/FraudRulesAdmin';
 import { DemoSimulatorPanel } from './components/FraudDashboard/DemoSimulatorPanel';
 import { AlertInvestigationModal } from './components/FraudDashboard/AlertInvestigationModal';
+import { CaseStudyView } from './components/CaseStudyView';
 import { api } from './services/api';
 import { Transaction, FraudAlert, FraudRule, DashboardOverview, Account } from './types';
 import { CheckCircle2, AlertCircle, ShieldAlert, X, Plus, Send } from 'lucide-react';
@@ -223,6 +224,10 @@ const MainLayout: React.FC = () => {
                 </table>
               </div>
             </div>
+          )}
+
+          {activeTab === 'case-study' && (
+            <CaseStudyView />
           )}
 
           {activeTab === 'settings' && (

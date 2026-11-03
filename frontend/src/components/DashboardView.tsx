@@ -3,7 +3,8 @@ import { Sparkline } from './Sparkline';
 import { GaugeChart } from './GaugeChart';
 import {
   Wallet, ArrowLeftRight, AlertTriangle, ShieldCheck, Shield, BarChart2,
-  ChevronDown, CheckCircle2, ShoppingCart, Film, DollarSign, Filter, RefreshCw
+  ChevronDown, CheckCircle2, ShoppingCart, Film, DollarSign, Filter, RefreshCw,
+  BookOpen, FileText, ExternalLink
 } from 'lucide-react';
 import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip,
@@ -157,6 +158,45 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <ArrowLeftRight className="w-4 h-4" />
             <span>Send Money</span>
           </button>
+        </div>
+      </div>
+
+      {/* Case Study Feature Banner */}
+      <div className="rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/25 p-4 sm:p-5 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex items-center space-x-3.5">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 shadow-md shadow-amber-500/10">
+            <BookOpen className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-bold text-amber-300 uppercase tracking-wider font-mono">Academic Dossier</span>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-200 border border-amber-500/30 font-mono font-semibold">
+                Huffman_Coding_Case_Study.docx
+              </span>
+            </div>
+            <p className="text-xs text-slate-300 mt-1">
+              Case study on optimal lossless compression, greedy prefix trees, and low-latency financial telemetry optimization.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end">
+          <button
+            onClick={() => onNavigateTab('case-study')}
+            className="px-3.5 py-2 rounded-xl bg-[#0C1222] hover:bg-[#162038] border border-[#162038] text-slate-200 hover:text-white text-xs font-mono transition-all"
+          >
+            Interactive Demo
+          </button>
+          <a
+            href="https://ap.wps.com/cms/docs/d/cbCaehdc77wBATjy?platform=pc&refer=whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs shadow-md shadow-amber-500/20 transition-all group"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Open Case Study</span>
+            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
         </div>
       </div>
 

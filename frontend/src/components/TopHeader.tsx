@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { Search, Bell, Radio } from 'lucide-react';
+import { Search, Bell, Radio, FileText, ExternalLink } from 'lucide-react';
 
 interface TopHeaderProps {
   onSearch?: (term: string) => void;
@@ -51,7 +51,20 @@ export const TopHeader: React.FC<TopHeaderProps> = ({ onSearch, onOpenNotificati
       </div>
 
       {/* Right Controls matching screenshot */}
-      <div className="flex items-center space-x-5 pl-4">
+      <div className="flex items-center space-x-4 pl-4">
+        {/* Case Study Fast Action Link */}
+        <a
+          href="https://ap.wps.com/cms/docs/d/cbCaehdc77wBATjy?platform=pc&refer=whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-mono font-medium transition-all group shadow-sm"
+          title="Open Huffman Coding Case Study in WPS Docs"
+        >
+          <FileText className="w-3.5 h-3.5 text-amber-400" />
+          <span>Case Study</span>
+          <ExternalLink className="w-3 h-3 text-amber-400/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </a>
+
         {/* Live Clock with Live Green Tag */}
         <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
           <span>{currentTime}</span>
